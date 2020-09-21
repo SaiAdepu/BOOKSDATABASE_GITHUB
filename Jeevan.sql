@@ -1,3 +1,3 @@
 ﻿USE BOOKSDATABASE
 SELECT A.*,B.*,C.* FROM BOOKSTABLE B,AUTHORSTABLE A,CUSTOMERSTABLE C
-select * from b
+select * from bookstable
