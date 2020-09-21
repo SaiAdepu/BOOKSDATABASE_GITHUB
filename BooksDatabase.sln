@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BooksDatabase", "BooksDatabase\BooksDatabase.sqlproj", "{DD7EE3E8-5F4A-4988-9BE5-CBBC775E9E38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{52EC11E0-56A4-4816-B13E-EA0AADC48FA6}"
+	ProjectSection(SolutionItems) = preProject
+		Aishwarya.sql = Aishwarya.sql
+		Jeevan.sql = Jeevan.sql
+		Nandini.sql = Nandini.sql
+		Rajashekar.sql = Rajashekar.sql
+		Sai Kumar.sql = Sai Kumar.sql
+		Spandhana.sql = Spandhana.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD7EE3E8-5F4A-4988-9BE5-CBBC775E9E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD7EE3E8-5F4A-4988-9BE5-CBBC775E9E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD7EE3E8-5F4A-4988-9BE5-CBBC775E9E38}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DD7EE3E8-5F4A-4988-9BE5-CBBC775E9E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD7EE3E8-5F4A-4988-9BE5-CBBC775E9E38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD7EE3E8-5F4A-4988-9BE5-CBBC775E9E38}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56129867-B032-459F-AB89-CE6A7CA66F10}
+	EndGlobalSection
+EndGlobal
