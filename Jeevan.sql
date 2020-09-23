@@ -32,5 +32,4 @@ declare @bn varchar(10)
 select @bn=bname from BOOKSTABLE where BID=@bid
 return @bn
 end
-
 select dbo.fun(1)
