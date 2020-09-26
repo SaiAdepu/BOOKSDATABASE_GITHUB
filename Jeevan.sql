@@ -24,6 +24,11 @@ select * from bookstable where price=(select max(price) from BOOKSTABLE)
 --6)
 SELECT *FROM CUSTOMERSTB WHERE NOT EXISTS(SELECT *FROM BOOKR WHERE CUSTOMERSTB.BID=BOOKR.BID)
 
+7)
+ SELECT ANAME,CNAME,COUNT(ANAME),COUNT(CNAME) FROM AUTHORSTABLE,CUSTOMERSTABLE,BOOKSTABLE 
+ WHERE AUTHORSTABLE.BID=BOOKSTABLE.BID AND 
+ CUSTOMERSTABLE.BID=BOOKSTABLE.BID GROUP BY ANAME,CNAME WITH ROLLUP
+
 --8)
 create function fun(@bid int)
 returns varchar(10)
@@ -33,3 +38,19 @@ select @bn=bname from BOOKSTABLE where BID=@bid
 return @bn
 end
 select dbo.fun(1)
+
+
+--9)
+create trigger trg
+on bookstable
+for insert,delete
+as begin
+if datename(dw,getdate()) not in('MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY')
+BEGIN 
+ROLLBACK
+RAISERROR('INVALID INSERTION',1,1)
+END
+END
+
+
+
