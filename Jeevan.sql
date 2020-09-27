@@ -6,7 +6,7 @@ INSERT INTO AUTHORSTABLE VALUES(1,'brian',234),(3,'BEN FORTA',567),(4,'GUDIO VAN
 INSERT INTO CUSTOMERSTABLE VALUES(1003,'VILLAGE',1),(1004,'COUNTRY',3),(1005,'STATE',1)
 
 --1)
-select * from bookstable inner join CUSTOMERSTABLE on 
+select distinct(bookstable.BID),bname,price,PUBLISHDATE from bookstable inner join CUSTOMERSTABLE on 
 BOOKSTABLE.bid=CUSTOMERSTABLE.BID where exists(
 select * from bookstable inner join AUTHORSTABLE on 
 BOOKSTABLE.bid=AUTHORSTABLE.BID)
