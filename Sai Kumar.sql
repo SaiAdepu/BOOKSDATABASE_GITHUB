@@ -34,11 +34,11 @@ INSERT INTO CUSTOMERSTABLE (CID,CNAME,GENDER)VALUES(4,'KNIGHT','FEMALE')
 
 -------------------------------------------------------------------------------------------------------------------------------------
 --1)List the Books details which book have At least one author,one customer exists.
-SELECT * FROM BOOKSTABLE WHERE
-EXISTS 
-(SELECT * FROM AUTHORSTABLE WHERE
+SELECT *FROM BOOKSTABLE WHERE
 EXISTS
-(SELECT * FROM CUSTOMERSTABLE))
+(SELECT ANAME,CNAME FROM AUTHORSTABLE,CUSTOMERSTABLE
+WHERE 
+AUTHORSTABLE.BID=BOOKSTABLE.BID OR CUSTOMERSTABLE.BID=BOOKSTABLE.BID)
 
 -------------------------------------------------------------------------------------------------------------------------------------
 --2)List the all Books,Authors,Customers details.
@@ -112,7 +112,7 @@ BEGIN
 	END
 END
 --EXECUTION
-INSERT INTO BOOKSTABLE VALUES(3,'.NET',200,GETDATE())
+INSERT INTO BOOKSTABLE VALUES(8,'.NET',200,GETDATE())
 
 SP_STORED_PROCEDURES
 
